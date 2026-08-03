@@ -1,0 +1,42 @@
+{
+    "location": "__LOCATION__",
+    "properties": {
+
+        "dataSources": {
+            "syslog": [
+                {
+                    "name": "SyslogDataSource",
+                    "streams": [
+                        "Microsoft-Syslog"
+                    ],
+                    "facilityNames": [
+                        "*"
+                    ],
+                    "logLevels": [
+                        "*"
+                    ]
+                }
+            ]
+        },
+
+        "destinations": {
+            "logAnalytics": [
+                {
+                    "workspaceResourceId": "__WORKSPACE_ID__",
+                    "name": "logDestination"
+                }
+            ]
+        },
+        
+        "dataFlows": [
+            {
+                "streams": [
+                    "Microsoft-Syslog"
+                ],
+                "destinations": [
+                    "logDestination"
+                ]
+            }
+        ]
+    }
+}
