@@ -1,0 +1,8 @@
+az deployment sub create \
+  --name project2Deployment \
+  --location CanadaEast \
+  --template-file main.bicep \
+  --parameters projectName=p2 \
+  resourceGroupLocation=CanadaEast \
+  deploymentEnviroment=dev \
+  storageAccountName=sajobfilesz4s3i54mvh24m
